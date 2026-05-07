@@ -1,1 +1,0 @@
-# Seg-t-Kezek-kft.
