@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segítő Kezek Kft. – Háztartási & Kertészeti Szolgáltatások, Pécs</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#1a4d2e;--gm:#2d7a47;--gb:#4caf72;--gl:#a8d5b5;--gp:#e8f5ed;
+  --gold:#c9a84c;--gop:rgba(201,168,76,.1);
+  --white:#fafffe;--td:#12291c;--tm:#3d6b50;--tl:#7aab8a;
+  --sh:0 8px 40px rgba(26,77,46,.11);--sh2:0 20px 60px rgba(26,77,46,.17);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--td);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,255,254,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(76,175,114,.14);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 18px rgba(26,77,46,.06)}
+.nl{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nlm{width:40px;height:40px;background:linear-gradient(135deg,var(--gd),var(--gb));border-radius:11px;display:flex;align-items:center;justify-content:center}
+.nlm svg{width:20px;height:20px}
+.nlt{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--gd);line-height:1.2}
+.nlt span{color:var(--tl);font-size:.66rem;font-weight:400;display:block;font-family:'DM Sans',sans-serif;letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:18px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--tm);font-size:.82rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--gd)}
+.nav-cta{background:var(--gd)!important;color:var(--white)!important;padding:7px 16px;border-radius:50px;transition:background .2s!important}
+.nav-cta:hover{background:var(--gm)!important}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--gd);padding:6px}
+.nav-toggle svg{width:22px;height:22px}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(140deg,#081b10 0%,#1a4d2e 42%,#2a6b3e 100%);position:relative;display:flex;align-items:center;overflow:hidden;padding:100px 5vw 60px}
+.hg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 74% 44%,rgba(76,175,114,.12) 0%,transparent 62%),radial-gradient(ellipse 30% 45% at 12% 82%,rgba(201,168,76,.05) 0%,transparent 50%)}
+.hgeo{position:absolute;inset:0;background-image:linear-gradient(rgba(76,175,114,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(76,175,114,.03) 1px,transparent 1px);background-size:56px 56px}
+.hc{position:relative;z-index:2;max-width:610px;animation:fu .85s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.htag{display:inline-flex;align-items:center;gap:8px;background:rgba(76,175,114,.16);border:1px solid rgba(76,175,114,.28);color:var(--gl);padding:5px 14px;border-radius:50px;font-size:.74rem;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:26px}
+.htag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gb);display:inline-block}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4.6vw,3.8rem);font-weight:700;color:#fff;line-height:1.12;margin-bottom:20px}
+h1 em{font-style:italic;color:var(--gb)}
+.hsub{font-size:.98rem;color:rgba(255,255,255,.62);line-height:1.77;margin-bottom:40px;max-width:490px;font-weight:300}
+.hact{display:flex;gap:13px;flex-wrap:wrap}
+.btn{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.9rem;padding:13px 28px;border-radius:50px;text-decoration:none;display:inline-block;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-g{background:var(--gb);color:var(--gd);box-shadow:0 4px 16px rgba(76,175,114,.3)}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(76,175,114,.4)}
+.btn-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.26)}
+.btn-w:hover{background:rgba(255,255,255,.07)}
+.btn-d{background:var(--gd);color:#fff;box-shadow:0 4px 14px rgba(26,77,46,.25)}
+.btn-d:hover{transform:translateY(-2px);background:var(--gm)}
+.hstats{position:absolute;right:5vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:13px;animation:fu 1.05s ease .3s both;z-index:2}
+.sc{background:rgba(255,255,255,.06);border:1px solid rgba(76,175,114,.16);backdrop-filter:blur(10px);border-radius:14px;padding:18px 26px;text-align:center;min-width:162px}
+.sc .n{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;color:var(--gb)}
+.sc .l{font-size:.72rem;color:rgba(255,255,255,.42);margin-top:3px}
+
+/* TRUST */
+.trust-bar{background:var(--gp);padding:15px 5vw;display:flex;align-items:center;justify-content:center;gap:38px;flex-wrap:wrap;border-bottom:1px solid rgba(76,175,114,.12)}
+.ti{display:flex;align-items:center;gap:8px;font-size:.83rem;font-weight:500;color:var(--gd)}
+.tdot{width:5px;height:5px;border-radius:50%;background:var(--gb);flex-shrink:0}
+
+/* SHARED */
+section{padding:84px 5vw}
+.sl{display:inline-block;font-size:.71rem;font-weight:600;letter-spacing:2.8px;text-transform:uppercase;color:var(--gb);margin-bottom:11px}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.85rem,3.1vw,2.6rem);font-weight:700;color:var(--gd);line-height:1.2;margin-bottom:13px}
+.sd{font-size:.94rem;color:var(--tm);line-height:1.72;max-width:570px;font-weight:300}
+
+/* ABOUT */
+.about-sec{background:var(--white)}
+.ag{display:grid;grid-template-columns:1.1fr 1fr;gap:68px;align-items:center}
+.at p{font-size:.95rem;color:var(--tm);line-height:1.82;font-weight:300;margin-bottom:14px}
+.at p strong{font-weight:600;color:var(--td)}
+.apills{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.ap{background:var(--gp);border-radius:11px;padding:14px 16px;border-left:3px solid var(--gb)}
+.ap h4{font-size:.82rem;font-weight:700;color:var(--gd);margin-bottom:3px}
+.ap p{font-size:.76rem;color:var(--tm);margin:0;line-height:1.5}
+.avis{background:linear-gradient(148deg,var(--gd) 0%,#22553a 100%);border-radius:24px;padding:44px 36px;color:#fff;position:relative;overflow:hidden}
+.avis::before{content:'';position:absolute;top:-50px;right:-50px;width:210px;height:210px;background:rgba(76,175,114,.09);border-radius:50%}
+.avis::after{content:'';position:absolute;bottom:-60px;left:-30px;width:200px;height:200px;background:rgba(201,168,76,.05);border-radius:50%}
+.avi{position:relative;z-index:2}
+.qm{font-size:4.5rem;line-height:.55;color:var(--gb);font-family:'Playfair Display',serif;margin-bottom:13px;display:block;opacity:.5}
+.avi blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.18rem;line-height:1.58;color:#fff;margin-bottom:18px}
+.av-attr{font-size:.73rem;color:rgba(255,255,255,.4);letter-spacing:1px;text-transform:uppercase}
+.frows{display:flex;flex-direction:column;gap:8px;margin-top:24px;position:relative;z-index:2}
+.fr{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:10px 13px}
+.fri{width:28px;height:28px;background:rgba(76,175,114,.18);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fri svg{width:14px;height:14px}
+.fr p{font-size:.81rem;color:rgba(255,255,255,.72);font-weight:300;line-height:1.4}
+.fr p strong{color:#fff;font-weight:600}
+
+/* TEAM */
+.team-sec{background:var(--gp)}
+.thd{margin-bottom:44px}
+.tnotice{display:inline-flex;align-items:center;gap:7px;background:var(--gop);border:1px solid rgba(201,168,76,.24);color:#7a5c10;padding:6px 14px;border-radius:50px;font-size:.75rem;font-weight:500;margin-top:12px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px}
+.tc{background:#fff;border-radius:19px;padding:27px 23px;border:1px solid rgba(76,175,114,.11);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.tc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gd),var(--gb));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.tc:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.tc:hover::after{transform:scaleX(1)}
+.fb{position:absolute;top:16px;right:16px;background:var(--gd);color:#fff;font-size:.61rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:3px 9px;border-radius:50px}
+.tav{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--gd),var(--gb));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:-.5px;margin-bottom:15px}
+.tc h3{font-family:'Playfair Display',serif;font-size:1.06rem;font-weight:700;color:var(--gd);margin-bottom:7px}
+.rw{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.rt{font-size:.75rem;font-weight:600;color:var(--gm);background:var(--gp);padding:3px 10px;border-radius:50px}
+.rp{font-size:.69rem;font-weight:500;color:#8a6a1a;background:var(--gop);border:1px solid rgba(201,168,76,.2);padding:3px 8px;border-radius:50px}
+.tc p{font-size:.83rem;color:var(--tm);line-height:1.65;font-weight:300}
+
+/* SERVICES */
+.svc-sec{background:var(--white)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:46px}
+.scard{border-radius:19px;overflow:hidden;border:1px solid rgba(76,175,114,.12);transition:transform .25s,box-shadow .25s;background:var(--white)}
+.scard:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.simg{height:150px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.c1{background:linear-gradient(135deg,#dff0e8,#c2dece)}
+.c2{background:linear-gradient(135deg,#d0ecda,#a3d0b1)}
+.c3{background:linear-gradient(135deg,#e4eceb,#c2d8cc)}
+.c4{background:linear-gradient(135deg,#d8eee0,#b2d4c0)}
+.c5{background:linear-gradient(135deg,#e0ede6,#bbdac8)}
+.c6{background:linear-gradient(135deg,#1a4d2e,#2d7a47)}
+.sbody{padding:22px 22px 24px}
+.sbody h3{font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:600;color:var(--gd);margin-bottom:7px}
+.sbody p{font-size:.85rem;color:var(--tm);line-height:1.65;font-weight:300;margin-bottom:12px}
+.stag{font-size:.77rem;font-weight:600;color:var(--gm);background:var(--gp);display:inline-block;padding:3px 12px;border-radius:50px;margin-bottom:12px}
+.stag.gold{color:#7a5c10;background:var(--gop)}
+.sdetail-btn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1.5px solid rgba(26,77,46,.2);color:var(--gd);font-size:.79rem;font-weight:600;padding:7px 15px;border-radius:50px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.sdetail-btn:hover{background:var(--gp);border-color:var(--gb)}
+
+/* SERVICE MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(8,22,14,.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:24px;max-width:680px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 30px 80px rgba(26,77,46,.3);animation:mopen .3s cubic-bezier(.34,1.4,.64,1) both}
+@keyframes mopen{from{opacity:0;transform:scale(.9) translateY(30px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.m-header{position:relative}
+.m-himg{height:140px;display:flex;align-items:center;justify-content:center;border-radius:24px 24px 0 0}
+.m-close{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;color:var(--gd);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:background .2s}
+.m-close:hover{background:#fff}
+.m-body{padding:26px 28px 30px}
+.m-body h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gd);margin-bottom:8px}
+.m-desc{font-size:.9rem;color:var(--tm);line-height:1.75;font-weight:300;margin-bottom:20px}
+.m-prices{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.m-prow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-radius:11px;background:var(--gp);border-left:3px solid var(--gb)}
+.m-prow.feat{background:var(--gd);border-left-color:var(--gb)}
+.m-prow.feat .mpn,.m-prow.feat .mpd{color:rgba(255,255,255,.85)!important}
+.m-prow.feat .mpp{color:var(--gb)!important}
+.m-prow.feat .mps{color:rgba(255,255,255,.5)!important}
+.mpn{font-weight:700;font-size:.88rem;color:var(--gd)}
+.mpd{font-size:.74rem;color:var(--tm);margin-top:2px;font-weight:300}
+.mpp{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--gd);white-space:nowrap;text-align:right}
+.mps{font-size:.7rem;color:var(--tl);font-weight:300;text-align:right}
+.mpb{display:block;background:var(--gb);color:var(--gd);font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:50px;text-align:center;margin-top:3px}
+.m-feats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:20px}
+.m-feat{font-size:.82rem;color:var(--tm);font-weight:300;padding-left:16px;position:relative}
+.m-feat::before{content:'✓';position:absolute;left:0;color:var(--gb);font-weight:700;font-size:.72rem}
+.m-cta{display:flex;gap:10px;flex-wrap:wrap}
+.m-cta .btn{flex:1;min-width:130px;text-align:center}
+
+/* PRICING */
+.price-sec{background:linear-gradient(180deg,var(--gp) 0%,#fff 100%)}
+.ptabs{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 38px}
+.tb{padding:8px 19px;border-radius:50px;border:1px solid rgba(76,175,114,.2);background:#fff;color:var(--tm);font-size:.83rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.tb.act,.tb:hover{background:var(--gd);color:#fff;border-color:var(--gd)}
+.pp{display:none}
+.pp.act{display:block}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.pc{background:#fff;border:1.5px solid rgba(76,175,114,.14);border-radius:19px;padding:25px 22px;transition:box-shadow .25s,transform .25s;position:relative}
+.pc:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+.pc.ft{border-color:var(--gd);background:var(--gd)}
+.pc.ft h3,.pc.ft .pa,.pc.ft li{color:#fff!important}
+.pc.ft .pp-s,.pc.ft .pp-p{color:rgba(255,255,255,.5)!important}
+.pc.ft li::before{color:var(--gb)!important}
+.pc.ft .pb{background:var(--gb);color:var(--gd)}
+.pb{display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 11px;background:var(--gp);color:var(--gd);border-radius:50px;margin-bottom:11px}
+.pc h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--gd);margin-bottom:5px}
+.pa{font-size:1.85rem;font-weight:700;color:var(--gd);font-family:'Playfair Display',serif}
+.pp-p{font-size:.79rem;color:var(--tl);margin-bottom:16px;font-weight:300}
+.pp-s{font-size:.75rem;color:var(--tl);font-weight:300}
+.pc ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.pc li{font-size:.83rem;color:var(--tm);font-weight:300;padding-left:16px;position:relative}
+.pc li::before{content:'✓';position:absolute;left:0;color:var(--gb);font-weight:700;font-size:.72rem;top:1px}
+.pc a,.pc button{display:block;text-align:center}
+
+/* B2B */
+.b2b-sec{background:var(--white)}
+.b2bbanner{background:linear-gradient(135deg,var(--gd) 0%,#205535 100%);border-radius:24px;padding:52px 5%;position:relative;overflow:hidden}
+.b2bbanner::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;background:rgba(76,175,114,.1);border-radius:50%}
+.b2bbanner::after{content:'';position:absolute;bottom:-40px;left:30%;width:180px;height:180px;background:rgba(201,168,76,.06);border-radius:50%}
+.b2btop{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start;position:relative;z-index:2}
+.b2btop .sl{color:var(--gb)}
+.b2btop h2{color:#fff;margin-bottom:14px}
+.b2btop>div>p{font-size:.93rem;color:rgba(255,255,255,.65);line-height:1.75;font-weight:300;margin-bottom:16px}
+.b2bbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.35);color:#f0d080;padding:7px 16px;border-radius:50px;font-size:.78rem;font-weight:500;margin-bottom:24px;letter-spacing:.4px}
+.b2bperks{display:flex;flex-direction:column;gap:9px;margin-top:6px}
+.b2bperk{display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:11px 13px}
+.b2bperk svg{flex-shrink:0;width:15px;height:15px;margin-top:1px}
+.b2bperk p{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:300;line-height:1.45}
+.b2bperk p strong{color:#fff;font-weight:600}
+.b2bcards{display:grid;grid-template-columns:1fr;gap:12px;position:relative;z-index:2}
+.b2bcard{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);border-radius:15px;padding:18px 20px}
+.b2bcard.hl{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25)}
+.b2bchead{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.b2bcard h4{font-family:'Playfair Display',serif;font-size:.98rem;font-weight:600;color:#fff}
+.b2bdisc{background:var(--gb);color:var(--gd);font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.5px}
+.b2bpr{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.b2borig{font-size:.8rem;color:rgba(255,255,255,.36);text-decoration:line-through;font-weight:300}
+.b2bnew{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--gb)}
+.b2bperiod{font-size:.73rem;color:rgba(255,255,255,.44);font-weight:300}
+.b2bcard p{font-size:.79rem;color:rgba(255,255,255,.56);font-weight:300;line-height:1.5}
+.b2bnote{margin-top:28px;padding:18px 20px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.22);border-radius:12px;position:relative;z-index:2;font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;font-weight:300}
+.b2bnote strong{color:#f0d080}
+
+/* FRAGRANCE */
+.frag-sec{background:var(--gp)}
+.frag-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:13px;margin:36px 0 28px}
+.frag-card{background:#fff;border-radius:18px;border:2px solid rgba(76,175,114,.15);padding:20px 14px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.frag-card:hover{border-color:var(--gb);transform:translateY(-3px);box-shadow:var(--sh)}
+.frag-card.sel{border-color:var(--gd);background:var(--gd);transform:translateY(-3px);box-shadow:var(--sh)}
+.frag-card.sel .fq,.frag-card.sel .fl{color:#fff}
+.frag-card.sel .fp{color:var(--gb)}
+.frag-card.sel .fo{color:rgba(255,255,255,.5)}
+.fchk{position:absolute;top:9px;right:9px;width:18px;height:18px;background:var(--gb);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.frag-card.sel .fchk{opacity:1}
+.fchk::after{content:'✓';color:var(--gd);font-size:.65rem;font-weight:700}
+.ficon{font-size:1.8rem;margin-bottom:8px;display:block}
+.fq{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gd)}
+.fl{font-size:.73rem;color:var(--tm);margin:2px 0 8px;font-weight:300}
+.fp{font-size:.85rem;font-weight:600;color:var(--gd)}
+.fo{font-size:.73rem;color:var(--tl);text-decoration:line-through}
+.fdisc{display:inline-block;background:var(--gold);color:#4a2e00;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:50px;margin-top:4px}
+.frag-scents-wrap{margin-bottom:26px}
+.frag-scents-wrap h4{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gd);margin-bottom:13px}
+.scent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.scent{background:#fff;border-radius:10px;padding:9px 12px;text-align:center;cursor:pointer;border:2px solid transparent;transition:all .18s;font-size:.8rem;color:var(--tm)}
+.scent:hover{border-color:var(--gb)}
+.scent.on{background:var(--gd);color:#fff;border-color:var(--gd)}
+.scent-icon{font-size:1.1rem;display:block;margin-bottom:2px}
+.frag-bar{background:var(--gd);border-radius:18px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.fbar-text h4{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:3px}
+.fbar-text p{font-size:.8rem;color:rgba(255,255,255,.6);font-weight:300}
+.fbar-price{text-align:right}
+.fbar-total{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gb)}
+.fbar-save{font-size:.73rem;color:rgba(255,255,255,.5);margin-top:1px}
+.fbar-btn{background:var(--gb);color:var(--gd);font-weight:700;font-size:.88rem;padding:11px 22px;border-radius:50px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
+.fbar-btn:hover{background:#5cc080;transform:translateY(-1px)}
+
+/* BOOKING */
+.booking-sec{background:var(--white)}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start;margin-top:40px}
+.cal-wrap{background:#fff;border:1.5px solid rgba(76,175,114,.14);border-radius:22px;padding:24px;box-shadow:var(--sh)}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.cal-nav h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--gd)}
+.cal-btn{background:var(--gp);border:none;border-radius:8px;width:30px;height:30px;cursor:pointer;color:var(--gd);font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.cal-btn:hover{background:var(--gl)}
+.cal-wdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:5px}
+.cal-wday{text-align:center;font-size:.67rem;font-weight:600;color:var(--tl);padding:3px 0;text-transform:uppercase}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cd{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:.83rem;font-weight:500;cursor:pointer;transition:all .18s;border:2px solid transparent;color:var(--td)}
+.cd:hover:not(.cd-busy):not(.cd-past){background:var(--gp);border-color:var(--gb)}
+.cd.cd-today{border-color:var(--gb);font-weight:700;color:var(--gd)}
+.cd.cd-sel{background:var(--gd);color:#fff;border-color:var(--gd)}
+.cd.cd-busy{background:#fef2f2;color:#c44;cursor:not-allowed;text-decoration:line-through;opacity:.7;font-size:.75rem}
+.cd.cd-past{color:rgba(0,0,0,.18);cursor:default}
+.cd.cd-empty{cursor:default}
+.cal-legend{display:flex;gap:14px;margin-top:12px;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:5px;font-size:.72rem;color:var(--tm)}
+.leg-dot{width:11px;height:11px;border-radius:3px}
+.timeslots{margin-top:16px;border-top:1px solid rgba(76,175,114,.1);padding-top:14px}
+.timeslots h5{font-size:.8rem;font-weight:600;color:var(--gd);margin-bottom:9px}
+.slot-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.slot{padding:9px 4px;text-align:center;border-radius:9px;font-size:.77rem;font-weight:500;cursor:pointer;border:1.5px solid rgba(76,175,114,.2);color:var(--tm);transition:all .18s}
+.slot:hover:not(.slot-full){background:var(--gp);border-color:var(--gb);color:var(--gd)}
+.slot.slot-sel{background:var(--gd);color:#fff;border-color:var(--gd)}
+.slot.slot-full{background:#fef2f2;color:#c44;border-color:#fca5a5;cursor:not-allowed;font-size:.68rem}
+.booking-form-wrap{background:var(--gp);border-radius:22px;padding:26px}
+.booking-form-wrap h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--gd);margin-bottom:16px}
+.bsummary{background:#fff;border-radius:12px;padding:13px 16px;margin-bottom:16px;border-left:3px solid var(--gb);font-size:.83rem;color:var(--tm);line-height:1.6}
+.bsummary strong{color:var(--gd)}
+.bsummary .nosel{color:var(--tl);font-style:italic;font-size:.8rem}
+
+/* ORDER */
+.order-sec{background:linear-gradient(135deg,var(--gd) 0%,#1f5c38 100%);position:relative;overflow:hidden}
+.order-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 78% 28%,rgba(76,175,114,.09) 0%,transparent 58%)}
+.ogrid{display:grid;grid-template-columns:1fr 1.45fr;gap:58px;align-items:start;position:relative;z-index:2}
+.order-sec .sl{color:var(--gb)}
+.oics{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.oic{background:rgba(255,255,255,.07);border:1px solid rgba(76,175,114,.2);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.oic svg{width:16px;height:16px;flex-shrink:0}
+.oic p{font-size:.83rem;color:rgba(255,255,255,.68);font-weight:300;line-height:1.45}
+.oic p strong{color:#fff;font-weight:600}
+.oform{background:#fff;border-radius:22px;padding:36px;box-shadow:var(--sh2)}
+.oform h3{font-family:'Playfair Display',serif;font-size:1.32rem;color:var(--gd);margin-bottom:24px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:13px}
+.f2.full{grid-template-columns:1fr}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:.79rem;font-weight:600;color:var(--gd);letter-spacing:.2px}
+.fg input,.fg select,.fg textarea{padding:11px 14px;border:1.5px solid rgba(76,175,114,.18);border-radius:9px;font-size:.88rem;font-family:'DM Sans',sans-serif;color:var(--td);background:var(--gp);outline:none;transition:border-color .2s,background .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gb);background:#fff}
+.fg textarea{resize:vertical;min-height:80px}
+.crow{display:flex;align-items:flex-start;gap:9px;margin-bottom:13px}
+.crow input[type=checkbox]{width:15px;height:15px;accent-color:var(--gd);margin-top:2px;flex-shrink:0}
+.crow label{font-size:.81rem;color:var(--tm);font-weight:400;line-height:1.45}
+.fsub{width:100%;background:var(--gd);color:#fff;font-weight:700;font-size:.95rem;padding:15px;border-radius:11px;border:none;cursor:pointer;transition:background .2s,transform .2s;font-family:'DM Sans',sans-serif;margin-top:4px}
+.fsub:hover{background:var(--gm);transform:translateY(-1px)}
+.fnote{text-align:center;font-size:.74rem;color:var(--tl);margin-top:10px}
+
+/* SOCIAL */
+.social-sec{background:var(--gp)}
+.socgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.socleft p{font-size:.93rem;color:var(--tm);line-height:1.78;font-weight:300;margin-bottom:14px}
+.soccards{display:flex;flex-direction:column;gap:14px}
+.soccard{background:#fff;border-radius:14px;padding:20px 22px;display:flex;align-items:flex-start;gap:14px;box-shadow:0 2px 14px rgba(26,77,46,.06);border-left:4px solid var(--gb)}
+.soci{width:36px;height:36px;background:var(--gp);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.soci svg{width:17px;height:17px}
+.soccard h4{font-size:.92rem;font-weight:600;color:var(--gd);margin-bottom:4px}
+.soccard p{font-size:.83rem;color:var(--tm);line-height:1.55;font-weight:300}
+
+/* CONTACT */
+.contact-sec{background:var(--white);border-top:1px solid rgba(76,175,114,.09)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:58px}
+.citem{display:flex;align-items:flex-start;gap:13px;margin-bottom:18px}
+.ci{width:40px;height:40px;background:var(--gp);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci svg{width:16px;height:16px}
+.citem h4{font-size:.79rem;font-weight:600;color:var(--gd);margin-bottom:2px}
+.citem p{font-size:.87rem;color:var(--tm);font-weight:300;line-height:1.5}
+.qform{background:var(--gp);border-radius:18px;padding:28px}
+.qform h3{font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--gd);margin-bottom:18px}
+
+/* FOOTER */
+footer{background:var(--gd);color:rgba(255,255,255,.5);padding:44px 5vw 26px}
+.fgg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:30px}
+.fn{font-family:'Playfair Display',serif;font-size:.98rem;font-weight:700;color:#fff}
+.fbrand p{font-size:.83rem;line-height:1.65;margin-top:9px;max-width:260px;font-weight:300}
+.fc h4{font-size:.79rem;font-weight:600;color:#fff;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc a{color:rgba(255,255,255,.44);font-size:.83rem;text-decoration:none;transition:color .2s;font-weight:300}
+.fc a:hover{color:var(--gb)}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:.75rem}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;right:24px;background:var(--gd);color:#fff;padding:12px 19px;border-radius:10px;font-size:.85rem;font-weight:500;box-shadow:0 8px 26px rgba(26,77,46,.28);transform:translateY(66px);opacity:0;transition:all .36s ease;z-index:9999;max-width:320px}
+#toast.show{transform:translateY(0);opacity:1}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hstats{display:none}
+  .ag,.ogrid,.socgrid,.cgrid,.fgg,.b2btop,.booking-grid{grid-template-columns:1fr;gap:26px}
+  .fgg{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--white);border-bottom:1px solid rgba(76,175,114,.13);padding:16px 5vw;gap:12px}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  .f2{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .fgg{grid-template-columns:1fr}
+  .trust-bar{gap:16px}
+  .apills{grid-template-columns:1fr}
+  .m-feats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nl" href="#hero">
+    <div class="nlm">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    </div>
+    <div class="nlt">Segítő Kezek <span>Kft. &mdash; Pécs</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Rólunk</a></li>
+    <li><a href="#team">Csapat</a></li>
+    <li><a href="#services">Szolgáltatások</a></li>
+    <li><a href="#pricing">Áraink</a></li>
+    <li><a href="#fragrance">Illatosítók</a></li>
+    <li><a href="#booking">Időpont</a></li>
+    <li><a href="#b2b">Cégeknek</a></li>
+    <li><a href="#contact">Kapcsolat</a></li>
+    <li><a href="#order" class="nav-cta">Rendelés</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- SERVICE MODAL -->
+<div class="modal-overlay" id="svcModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="m-header">
+      <div class="m-himg" id="mHimg"></div>
+      <button class="m-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="m-body">
+      <h3 id="mTitle"></h3>
+      <p class="m-desc" id="mDesc"></p>
+      <div class="m-prices" id="mPrices"></div>
+      <div class="m-feats" id="mFeats"></div>
+      <div class="m-cta">
+        <a href="#booking" class="btn btn-d" onclick="closeModal()">Időpontot foglalok</a>
+        <a href="#order" class="btn btn-g" onclick="closeModal()">Megrendelem</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hg"></div><div class="hgeo"></div>
+  <div class="hc">
+    <div class="htag">Pécs &amp; Baranya Vármegye</div>
+    <h1>Adjon időt<br><em>szeretteinek</em><br>és önmagának</h1>
+    <p class="hsub">A Segítő Kezek Kft. átvállal minden háztartási és kertészeti terhet, hogy Ön arra összpontosíthasson, ami valóban számít.</p>
+    <div class="hact">
+      <a href="#order" class="btn btn-g">Rendelés leadása</a>
+      <a href="#services" class="btn btn-w">Szolgáltatásaink</a>
+    </div>
+  </div>
+  <div class="hstats">
+    <div class="sc"><div class="n">5+</div><div class="l">Szolgáltatástípus</div></div>
+    <div class="sc"><div class="n">2026</div><div class="l">Alapítás éve</div></div>
+    <div class="sc"><div class="n">6 fő</div><div class="l">Szakértő csapat</div></div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="ti"><div class="tdot"></div>Környezetbarát tisztítószerek</div>
+  <div class="ti"><div class="tdot"></div>Ellenőrzött, szerződéses munkatársak</div>
+  <div class="ti"><div class="tdot"></div>Szelektív hulladékgyűjtés</div>
+  <div class="ti"><div class="tdot"></div>Kedvezményes díjak rászorulóknak</div>
+  <div class="ti"><div class="tdot"></div>+36 XX XXX XXXX</div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-sec" id="about">
+  <div class="ag">
+    <div class="at reveal">
+      <span class="sl">Rólunk</span>
+      <h2>Egy küldetés, hat elkötelezett ember</h2>
+      <p>A <strong>Segítő Kezek Kft.</strong> 2026-ban alakult Pécsett, hat motivált fiatal alapító összefogásával. Küldetésünk egyszerű, mégis mélyen emberi: visszaadjuk Önnek az időt – azt az időt, amelyet a mindennapi háztartási terhek elvesznek a munkától, a családtól és a feltöltődéstől.</p>
+      <p>Komplex szolgáltatásainkkal egyetlen megbízható csapatra bízhatja otthona gondozását. Munkánk során kizárólag <strong>környezetbarát tisztítószereket</strong> alkalmazunk, és szelektíven kezeljük a keletkező hulladékot – mert a fenntarthatóság mindennapi döntés számunkra.</p>
+      <p>Induló baranyai vállalkozásként személyes kapcsolatot építünk minden ügyfelünkkel. Hosszú távú célunk az országos jelenlét – de a minőséget soha nem áldozzuk fel a növekedés oltárán.</p>
+      <div class="apills">
+        <div class="ap"><h4>Baranya Vármegye</h4><p>Pécsről indulunk, innen terjeszkedünk regionálisan, majd országosan.</p></div>
+        <div class="ap"><h4>Ökotudatos</h4><p>Környezetbarát szerek és szelektív hulladékgyűjtés minden kiszállásnál.</p></div>
+        <div class="ap"><h4>Társadalmi felelősség</h4><p>Szociális kedvezmény idős és egészségkárosodott ügyfeleinknek.</p></div>
+        <div class="ap"><h4>Megbízhatóság</h4><p>Ellenőrzött, szerződéses munkatársak – otthonában is nyugodtan bízhat ránk.</p></div>
+      </div>
+    </div>
+    <div class="avis reveal">
+      <div class="avi">
+        <span class="qm">&ldquo;</span>
+        <blockquote>Adjon időt szeretteinek és önmagának &ndash; mi gondoskodunk a többiről.</blockquote>
+        <p class="av-attr">&mdash; A Segítő Kezek Kft. alapítói, 2026</p>
+        <div class="frows">
+          <div class="fr">
+            <div class="fri"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <p><strong>Célunk:</strong> Megbízható piacvezető pozíció a háztartási és kertészeti szolgáltatások területén.</p>
+          </div>
+          <div class="fr">
+            <div class="fri"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <p><strong>Működés:</strong> 2 márkás kisteherautó, útvonal-optimalizációval és home-office háttérrel.</p>
+          </div>
+          <div class="fr">
+            <div class="fri"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <p><strong>Közvetlen kapcsolat:</strong> Nincs közvetítő – Ön mindig velünk beszél, kiszámítható árakon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-sec" id="team">
+  <div class="thd reveal">
+    <span class="sl">A csapatunk</span>
+    <h2>Ismerje meg az alapítókat</h2>
+    <p class="sd">Hat elkötelezett szakember, akik közösen álmodták meg és építik a Segítő Kezek Kft.-t.</p>
+    <div class="tnotice">A beosztások véglegesítése folyamatban &ndash; hamarosan frissítjük</div>
+  </div>
+  <div class="tgrid">
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">MI</div><h3>Makk Iván</h3><div class="rw"><span class="rt">Cégvezető</span></div><p>A vállalkozás ügyvezetője. Felelős a stratégiai döntésekért, az operatív koordinációért és a vállalkozás hosszú távú irányításáért.</p></div>
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">SzB</div><h3>Szabados Barnabás</h3><div class="rw"><span class="rt">Kereskedelmi terület</span><span class="rp">(még nem végleges)</span></div><p>Az értékesítési folyamatok irányítása, ügyfélkapcsolatok ápolása és új üzleti partnerségek kialakítása tartozik feladatkörébe.</p></div>
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">KB</div><h3>Koleszár Barnabás</h3><div class="rw"><span class="rt">Informatika</span><span class="rp">(még nem végleges)</span></div><p>A digitális infrastruktúra és belső rendszerek fejlesztése, az IT-alapú folyamatok hatékony működtetése a fő területe.</p></div>
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">DM</div><h3>Dabis Máté</h3><div class="rw"><span class="rt">Informatika</span><span class="rp">(még nem végleges)</span></div><p>Koleszár Barnabással közösen dolgozik a technológiai háttér kiépítésén és az informatikai megoldások bevezetésén.</p></div>
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">MV</div><h3>Madar Vivien</h3><div class="rw"><span class="rt">Pénzügy</span><span class="rp">(még nem végleges)</span></div><p>A vállalkozás pénzügyi tervezése, cashflow-menedzsment, számlázás és az adminisztratív folyamatok gondozása.</p></div>
+    <div class="tc reveal"><div class="fb">Alapító</div><div class="tav">SzM</div><h3>Szűcs Marco</h3><div class="rw"><span class="rt">Logisztika</span><span class="rp">(még nem végleges)</span></div><p>A kiszálló csapatok koordinációja, útvonal-optimalizáció és a járművek, eszközök hatékony menedzsmentje.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-sec" id="services">
+  <div class="reveal">
+    <span class="sl">Amit kínálunk</span>
+    <h2>Teljes körű otthongondozás</h2>
+    <p class="sd">Rugalmas, megbízható és ökotudatos csapatunk átvállal minden napi terhet, hogy Ön a fontosakra összpontosíthasson. Kattintson egy szolgáltatásra a részletekért és árakért!</p>
+  </div>
+  <div class="sgrid">
+
+    <div class="scard reveal">
+      <div class="simg c1">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><rect x="20" y="24" width="90" height="72" rx="3" fill="white" fill-opacity=".55" stroke="#2d7a47" stroke-width="1.5"/><line x1="65" y1="24" x2="65" y2="96" stroke="#2d7a47" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/><line x1="20" y1="60" x2="110" y2="60" stroke="#2d7a47" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/><rect x="28" y="32" width="22" height="18" rx="2" fill="none" stroke="#1a4d2e" stroke-width="1.5" opacity=".6"/><line x1="39" y1="32" x2="39" y2="50" stroke="#1a4d2e" stroke-width="1" opacity=".4"/><line x1="128" y1="18" x2="112" y2="120" stroke="#1a4d2e" stroke-width="5" stroke-linecap="round" opacity=".7"/><ellipse cx="108" cy="124" rx="16" ry="6" fill="#2d7a47" opacity=".6"/><rect x="148" y="50" width="18" height="28" rx="4" fill="#4caf72" opacity=".55"/><rect x="152" y="42" width="8" height="12" rx="2" fill="#2d7a47" opacity=".65"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Lakástakarítás</h3>
+        <p>Alapos, környezetbarát szerekkel végzett alap- és nagytakarítás. Havi előfizetéssel 40% kedvezmény.</p>
+        <span class="stag">25 000 Ft/alkalomtól</span><br>
+        <button class="sdetail-btn" onclick="openModal('tak')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+    <div class="scard reveal">
+      <div class="simg c2">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><rect x="0" y="108" width="180" height="42" fill="#a8d5b5" fill-opacity=".35"/><rect x="82" y="60" width="10" height="52" rx="3" fill="#1a4d2e" opacity=".6"/><ellipse cx="87" cy="48" rx="32" ry="30" fill="#2d7a47" opacity=".65"/><ellipse cx="87" cy="40" rx="22" ry="19" fill="#4caf72" opacity=".5"/><ellipse cx="34" cy="100" rx="22" ry="16" fill="#2d7a47" opacity=".55"/><ellipse cx="148" cy="98" rx="18" ry="13" fill="#2d7a47" opacity=".5"/><circle cx="56" cy="106" r="4.5" fill="#c9a84c" opacity=".75"/><line x1="148" y1="22" x2="138" y2="108" stroke="#1a4d2e" stroke-width="2.8" stroke-linecap="round" opacity=".6"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Kertgondozás</h3>
+        <p>Nyírás, gyomirtás, ültetés, szezonális kertészeti munkák. Baranya vármegye egész területén.</p>
+        <span class="stag">20 000 Ft/alkalomtól</span><br>
+        <button class="sdetail-btn" onclick="openModal('kert')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+    <div class="scard reveal">
+      <div class="simg c3">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><rect x="22" y="28" width="52" height="78" rx="2" fill="white" fill-opacity=".45" stroke="#2d7a47" stroke-width="1.5"/><path d="M110 30 C118 22 134 28 130 40 L105 115 C103 120 96 120 95 115 L93 108 C92 103 96 100 100 102 L104 104 Z" fill="#1a4d2e" opacity=".65"/><line x1="140" y1="20" x2="155" y2="120" stroke="#2d7a47" stroke-width="7" stroke-linecap="round" opacity=".5"/><rect x="136" y="16" width="12" height="10" rx="2" fill="#4caf72" opacity=".65"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Kisjavítás &amp; Karbantartás</h3>
+        <p>Kisebb karbantartási és javítási feladatok elvégzése az Ön otthonában. Gyorsan és hatékonyan.</p>
+        <span class="stag">Egyedi árajánlat</span><br>
+        <button class="sdetail-btn" onclick="openModal('javitas')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+    <div class="scard reveal">
+      <div class="simg c4">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><path d="M60 55 L52 125 L128 125 L120 55 Z" fill="white" fill-opacity=".55" stroke="#2d7a47" stroke-width="2"/><path d="M72 55 C72 38 108 38 108 55" fill="none" stroke="#1a4d2e" stroke-width="3" stroke-linecap="round"/><line x1="65" y1="80" x2="115" y2="80" stroke="#4caf72" stroke-width="2" opacity=".5"/><circle cx="148" cy="42" r="18" fill="#2d7a47" opacity=".55"/><polyline points="138,42 145,50 160,32" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Bevásárlás</h3>
+        <p>Megbízáson alapuló bevásárlás. Ideális elfoglalt vagy mozgáskorlátozott ügyfelek számára.</p>
+        <span class="stag">Egyedi árajánlat</span><br>
+        <button class="sdetail-btn" onclick="openModal('bevasarlas')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+    <div class="scard reveal">
+      <div class="simg c5">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><line x1="62" y1="24" x2="118" y2="24" stroke="#1a4d2e" stroke-width="2.5" stroke-linecap="round" opacity=".55"/><path d="M76 24 L62 62 L96 62 Z" fill="none" stroke="#1a4d2e" stroke-width="1.8" stroke-linejoin="round" opacity=".55"/><path d="M90 66 L91 68 L94 78 L92 98 L112 98 L110 78 L113 68 L124 66" fill="#4caf72" fill-opacity=".35" stroke="#2d7a47" stroke-width="1.2"/><rect x="130" y="104" width="38" height="22" rx="4" fill="#1a4d2e" opacity=".55"/><circle cx="138" cy="126" r="6" fill="#4caf72" opacity=".7"/><circle cx="160" cy="126" r="6" fill="#4caf72" opacity=".7"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Tisztítóba szállítás</h3>
+        <p>Ruházati cikkek átvétele, tisztítóba szállítása és visszahozatala. Kényelmes megoldás.</p>
+        <span class="stag">Egyedi árajánlat</span><br>
+        <button class="sdetail-btn" onclick="openModal('tisztito')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+    <div class="scard reveal">
+      <div class="simg c6">
+        <svg width="180" height="150" viewBox="0 0 180 150" fill="none"><polygon points="90,18 100,44 128,44 106,60 114,86 90,70 66,86 74,60 52,44 80,44" fill="rgba(201,168,76,0.35)" stroke="#c9a84c" stroke-width="1.8" stroke-linejoin="round"/><polygon points="90,26 97,44 116,44 102,55 107,74 90,63 73,74 78,55 64,44 83,44" fill="rgba(201,168,76,0.2)"/></svg>
+      </div>
+      <div class="sbody">
+        <h3>Prémium Kombinált Csomag</h3>
+        <p>Takarítás, bevásárlás, kertgondozás és karbantartás egységes csomagban, 5–20% kedvezménnyel.</p>
+        <span class="stag gold">100 000 – 300 000 Ft/hó</span><br>
+        <button class="sdetail-btn" onclick="openModal('premium')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Részletek &amp; Árak
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="price-sec" id="pricing">
+  <div class="reveal">
+    <span class="sl">Átlátható árazás</span>
+    <h2>Válassza az Önnek megfelelő csomagot</h2>
+    <p class="sd">Kiszámítható, rejtett díjak nélkül. Minden igényhez és büdzséhez igazított rugalmas tarifák.</p>
+  </div>
+  <div class="ptabs reveal">
+    <button class="tb act" onclick="showTab('tak',this)">Lakástakarítás</button>
+    <button class="tb" onclick="showTab('kert',this)">Kertgondozás</button>
+    <button class="tb" onclick="showTab('prem',this)">Kombinált csomagok</button>
+  </div>
+
+  <div class="pp act reveal" id="tab-tak">
+    <div class="pg">
+      <div class="pc"><div class="pb">Egyszeri</div><h3>Alaptakarítás</h3><div class="pa">25 000 Ft</div><div class="pp-p">/ alkalom &nbsp;(30–50 nm)</div><ul><li>Porszívózás, felmosás</li><li>Felületek törlése</li><li>Fürdő &amp; konyha</li><li>Környezetbarát szerek</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+      <div class="pc ft"><div class="pb">Legnépszerűbb</div><h3>Havi előfizetés</h3><div class="pa">55 000 Ft</div><div class="pp-p">/ hó &nbsp;·&nbsp; 4 alkalom (~13 750 Ft/db)</div><div class="pp-s" style="margin-bottom:14px">~40% megtakarítás az eseti árhoz képest</div><ul><li>4 takarítás havonta</li><li>Prioritásos időpont</li><li>Dedikált munkatárs</li><li>Havi egységes számla</li><li>Lemondható 30 napos felmondással</li></ul><a href="#order" class="btn btn-g">Előfizetek</a></div>
+      <div class="pc"><div class="pb">Egyszeri</div><h3>Nagytakarítás</h3><div class="pa">35 000 Ft</div><div class="pp-p">/ alkalom</div><ul><li>Mélyebb, alaposabb tisztítás</li><li>Szekrények, fiókók belseje</li><li>Konyhai berendezések</li><li>Ablakok &amp; keretek</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+      <div class="pc"><div class="pb">nm-alapú</div><h3>Nagyobb lakás / ház</h3><div class="pa" style="font-size:1.4rem">125–417 Ft/nm</div><div class="pp-p">Terület szerint számított ár</div><ul><li>50–80 nm: ~31 000 Ft</li><li>80–120 nm: ~42 000 Ft</li><li>120–200 nm: ~62 000 Ft</li><li>200 nm felett: egyedi ajánlat</li></ul><a href="#order" class="btn btn-d">Ajánlatot kérek</a></div>
+    </div>
+  </div>
+
+  <div class="pp reveal" id="tab-kert">
+    <div class="pg">
+      <div class="pc"><div class="pb">Eseti</div><h3>Kisebb kert</h3><div class="pa">20 000 Ft</div><div class="pp-p">/ alkalom &nbsp;(~200 m² alatt)</div><ul><li>Fűnyírás, gyomirtás</li><li>Ültetés, metszés</li><li>Szezonális munkák</li><li>Hulladék elszállítása</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+      <div class="pc"><div class="pb">Eseti</div><h3>Közepes / nagy kert</h3><div class="pa" style="font-size:1.45rem">40–100 E Ft</div><div class="pp-p">/ alkalom &nbsp;(200 m² felett)</div><ul><li>Komplex kertészeti munka</li><li>Fa- és bokormunka</li><li>Öntözőrendszer ellenőrzés</li><li>Szezonális felkészítés</li></ul><a href="#order" class="btn btn-d">Ajánlatot kérek</a></div>
+      <div class="pc ft"><div class="pb">Havi csomag</div><h3>Kert előfizetés</h3><div class="pa">89 990 Ft</div><div class="pp-p">/ hó &nbsp;·&nbsp; rendszeres gondozás</div><ul><li>Havi 2–4 látogatás</li><li>Prioritásos időpont</li><li>Szezonális tanácsadás</li><li>Eszközök biztosítva</li><li>Kiszámítható havi díj</li></ul><a href="#order" class="btn btn-g">Előfizetek</a></div>
+      <div class="pc"><div class="pb">Szezonális</div><h3>Tavaszi / őszi csomag</h3><div class="pa" style="font-size:1.45rem">15–35 E Ft</div><div class="pp-p">Egyszeri szezonális felkészítés</div><ul><li>Tavaszi: vetés, trágyázás</li><li>Őszi: mulcsozás, gereblyézés</li><li>Lombleszívás</li><li>Virágágyás előkészítés</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+    </div>
+  </div>
+
+  <div class="pp reveal" id="tab-prem">
+    <div class="pg">
+      <div class="pc"><div class="pb">Alap kombó</div><h3>Takarítás + Bevásárlás</h3><div class="pa" style="font-size:1.45rem">85 000 Ft</div><div class="pp-p">/ hó &nbsp;·&nbsp; ~10% csomag-kedvezmény</div><div class="pp-s" style="margin-bottom:14px">Külön: ~94 000 Ft &nbsp;·&nbsp; megtakarítás: ~9 000 Ft</div><ul><li>4× alaptakarítás</li><li>4× heti bevásárlás</li><li>Egységes havi számla</li><li>Rugalmas időpontok</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+      <div class="pc"><div class="pb">Otthon kombó</div><h3>Takarítás + Kertgondozás</h3><div class="pa" style="font-size:1.45rem">128 000 Ft</div><div class="pp-p">/ hó &nbsp;·&nbsp; ~11% csomag-kedvezmény</div><div class="pp-s" style="margin-bottom:14px">Külön: ~144 000 Ft &nbsp;·&nbsp; megtakarítás: ~16 000 Ft</div><ul><li>4× alaptakarítás</li><li>2× kertgondozás</li><li>Szezonális kertészet</li><li>Dedikált koordinátor</li></ul><a href="#order" class="btn btn-d">Megrendelem</a></div>
+      <div class="pc ft"><div class="pb">Teljes csomag</div><h3>Prémium – Minden benne</h3><div class="pa" style="font-size:1.5rem">175 000 Ft</div><div class="pp-p">/ hó &nbsp;·&nbsp; ~15% csomag-kedvezmény</div><div class="pp-s" style="margin-bottom:14px">Külön: ~206 000 Ft &nbsp;·&nbsp; megtakarítás: ~31 000 Ft</div><ul><li>4× alaptakarítás</li><li>2× kertgondozás</li><li>4× bevásárlás</li><li>Kisjavítás 1 alkalom/hó</li><li>Tisztítóba szállítás</li><li>Dedikált munkatárs</li><li>Elsőbbségi kiszállás</li></ul><a href="#order" class="btn btn-g">Előfizetek</a></div>
+      <div class="pc"><div class="pb">VIP</div><h3>VIP – Teljes körű ellátás</h3><div class="pa" style="font-size:1.4rem">250 000 Ft+</div><div class="pp-p">/ hó &nbsp;·&nbsp; ~20% csomag-kedvezmény</div><div class="pp-s" style="margin-bottom:14px">Tartalma egyedi igényfelmérés alapján</div><ul><li>Minden szolgáltatás benne</li><li>Heti rendszeres kiszállás</li><li>Személyre szabott csomag</li><li>VIP ügyfélszolgálat</li><li>Ünnepi illatcsomag (+1 500 Ft)</li></ul><a href="#order" class="btn btn-d">Egyedi ajánlat</a></div>
+    </div>
+    <p style="font-size:.79rem;color:var(--tl);margin-top:16px">A kombinált csomagok 5–20%-os kedvezményt biztosítanak az egyes szolgáltatások egyedi áraihoz képest. Pontos árajánlathoz vegye fel velünk a kapcsolatot.</p>
+  </div>
+</section>
+
+<!-- FRAGRANCE -->
+<section class="frag-sec" id="fragrance">
+  <div class="reveal">
+    <span class="sl">Illatosítószerek</span>
+    <h2>Friss illat az otthonába</h2>
+    <p class="sd">Prémium minőségű illatosítószerek 1 000 Ft/db egységáron. Minél nagyobb csomagot választ, annál kedvezőbb az ár – akár 7% megtakarítás!</p>
+  </div>
+
+  <div class="frag-grid reveal">
+    <div class="frag-card" onclick="pickPkg(this,5,2)">
+      <div class="fchk"></div>
+      <span class="ficon">🌿</span>
+      <div class="fq">5 db</div>
+      <div class="fl">Próbacsomag</div>
+      <div class="fp">4 900 Ft</div>
+      <div class="fo">5 000 Ft</div>
+      <span class="fdisc">–2%</span>
+    </div>
+    <div class="frag-card" onclick="pickPkg(this,8,3)">
+      <div class="fchk"></div>
+      <span class="ficon">🌸</span>
+      <div class="fq">8 db</div>
+      <div class="fl">Starter csomag</div>
+      <div class="fp">7 760 Ft</div>
+      <div class="fo">8 000 Ft</div>
+      <span class="fdisc">–3%</span>
+    </div>
+    <div class="frag-card sel" onclick="pickPkg(this,10,4)">
+      <div class="fchk"></div>
+      <span class="ficon">🌺</span>
+      <div class="fq">10 db</div>
+      <div class="fl">Otthon csomag</div>
+      <div class="fp">9 600 Ft</div>
+      <div class="fo">10 000 Ft</div>
+      <span class="fdisc">–4%</span>
+    </div>
+    <div class="frag-card" onclick="pickPkg(this,12,5)">
+      <div class="fchk"></div>
+      <span class="ficon">🌻</span>
+      <div class="fq">12 db</div>
+      <div class="fl">Kedvelt csomag</div>
+      <div class="fp">11 400 Ft</div>
+      <div class="fo">12 000 Ft</div>
+      <span class="fdisc">–5%</span>
+    </div>
+    <div class="frag-card" onclick="pickPkg(this,15,6)">
+      <div class="fchk"></div>
+      <span class="ficon">🌷</span>
+      <div class="fq">15 db</div>
+      <div class="fl">Nagy csomag</div>
+      <div class="fp">14 100 Ft</div>
+      <div class="fo">15 000 Ft</div>
+      <span class="fdisc">–6%</span>
+    </div>
+    <div class="frag-card" onclick="pickPkg(this,20,7)">
+      <div class="fchk"></div>
+      <span class="ficon">👑</span>
+      <div class="fq">20 db</div>
+      <div class="fl">Prémium csomag</div>
+      <div class="fp">18 600 Ft</div>
+      <div class="fo">20 000 Ft</div>
+      <span class="fdisc">–7%</span>
+    </div>
+  </div>
+
+  <div class="frag-scents-wrap reveal">
+    <h4>Válassza ki az illatát (több is választható):</h4>
+    <div class="scent-grid">
+      <div class="scent on" onclick="this.classList.toggle('on')"><span class="scent-icon">🌿</span>Friss menta</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🌸</span>Rózsa &amp; ibolya</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🌲</span>Fenyő &amp; erdő</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🍋</span>Citrus &amp; bergamott</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🪵</span>Szantálfa &amp; vanília</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🌊</span>Óceán &amp; bríz</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🍃</span>Eukaliptusz</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">🌺</span>Jázmin &amp; liliom</div>
+      <div class="scent" onclick="this.classList.toggle('on')"><span class="scent-icon">☕</span>Kávé &amp; fahéj</div>
+    </div>
+  </div>
+
+  <div class="frag-bar reveal">
+    <div class="fbar-text">
+      <h4 id="fbarTitle">10 db – Otthon csomag</h4>
+      <p id="fbarDetail">Egységár: 960 Ft/db &nbsp;·&nbsp; Megtakarítás: 400 Ft</p>
+    </div>
+    <div class="fbar-price">
+      <div class="fbar-total" id="fbarTotal">9 600 Ft</div>
+      <div class="fbar-save" id="fbarSave">–4% csomag kedvezmény</div>
+    </div>
+    <button class="fbar-btn" onclick="orderFrag()">🛒 Megrendelem</button>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-sec" id="booking">
+  <div class="reveal">
+    <span class="sl">Időpontfoglalás</span>
+    <h2>Válasszon szabad időpontot</h2>
+    <p class="sd">A piros napok és napszakok már foglaltak. Kattintson egy szabad napra, majd válasszon napszakot, és töltse ki adatait.</p>
+  </div>
+  <div class="booking-grid">
+    <div class="reveal">
+      <div class="cal-wrap">
+        <div class="cal-nav">
+          <button class="cal-btn" onclick="changeMonth(-1)">&#8249;</button>
+          <h4 id="calTitle"></h4>
+          <button class="cal-btn" onclick="changeMonth(1)">&#8250;</button>
+        </div>
+        <div class="cal-wdays">
+          <div class="cal-wday">H</div><div class="cal-wday">K</div><div class="cal-wday">Sze</div>
+          <div class="cal-wday">Cs</div><div class="cal-wday">P</div><div class="cal-wday">Szo</div><div class="cal-wday">V</div>
+        </div>
+        <div class="cal-days" id="calDays"></div>
+        <div class="cal-legend">
+          <div class="leg"><div class="leg-dot" style="background:var(--gd)"></div>Kiválasztott</div>
+          <div class="leg"><div class="leg-dot" style="background:#fca5a5"></div>Foglalt</div>
+          <div class="leg"><div class="leg-dot" style="background:var(--gp);border:1px solid var(--gb)"></div>Szabad</div>
+        </div>
+        <div class="timeslots" id="timeslots" style="display:none">
+          <h5>Válasszon napszakot:</h5>
+          <div class="slot-row" id="slotRow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="booking-form-wrap">
+        <h4>Foglalás adatai</h4>
+        <div class="bsummary" id="bSummary"><span class="nosel">Kérjük, válasszon napot a naptárból.</span></div>
+        <form onsubmit="submitBooking(event)">
+          <div class="fg" style="margin-bottom:11px"><label>Teljes neve *</label><input type="text" placeholder="Pl. Kovács Anna" required></div>
+          <div class="fg" style="margin-bottom:11px"><label>Telefon *</label><input type="tel" placeholder="+36 XX XXX XXXX" required></div>
+          <div class="fg" style="margin-bottom:11px"><label>E-mail *</label><input type="email" placeholder="email@example.hu" required></div>
+          <div class="fg" style="margin-bottom:11px">
+            <label>Szolgáltatás *</label>
+            <select required>
+              <option value="">– Válasszon –</option>
+              <option>Lakástakarítás – Alaptakarítás (25 000 Ft)</option>
+              <option>Lakástakarítás – Nagytakarítás (35 000 Ft)</option>
+              <option>Lakástakarítás – Havi előfizetés (55 000 Ft/hó)</option>
+              <option>Kertgondozás – Kisebb kert (20 000 Ft)</option>
+              <option>Kertgondozás – Közepes/nagy kert</option>
+              <option>Kertgondozás – Havi csomag (89 990 Ft/hó)</option>
+              <option>Kisjavítás &amp; karbantartás</option>
+              <option>Bevásárlás</option>
+              <option>Tisztítóba szállítás</option>
+              <option>Prémium kombinált csomag</option>
+            </select>
+          </div>
+          <div class="fg" style="margin-bottom:16px"><label>Cím</label><input type="text" placeholder="Pécs, utca, házszám"></div>
+          <button type="submit" class="fsub">Foglalás elküldése</button>
+          <p class="fnote" style="color:var(--tl)">24 órán belül visszaigazoljuk a foglalást.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section class="b2b-sec" id="b2b">
+  <div class="reveal" style="margin-bottom:36px">
+    <span class="sl">Vállalati ajánlat</span>
+    <h2>Cégeknek kedvezőbb feltételekkel</h2>
+    <p class="sd">Éves vagy havi szerződéssel irodatakarítási és egyéb vállalati szolgáltatásaink garantált minőséget és kiszámítható költségeket biztosítanak.</p>
+  </div>
+  <div class="b2bbanner reveal">
+    <div class="b2btop">
+      <div>
+        <div class="b2bbadge">Vállalati szerződéses kedvezmény &mdash; minimum 10%</div>
+        <h2 style="color:#fff;font-size:clamp(1.55rem,2.5vw,2.1rem)">Profi irodatakarítás &amp; vállalati szolgáltatások</h2>
+        <p>Havi vagy éves szerződéssel vállalataink számára garantált prioritásos kiszállást, fix díjat és dedikált kapcsolattartót biztosítunk.</p>
+        <div class="b2bperks">
+          <div class="b2bperk"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p><strong>Rögzített havi díj</strong> – kiszámítható költségek, meglepetés nélkül</p></div>
+          <div class="b2bperk"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p><strong>Dedikált kapcsolattartó</strong> – egy pont, ahol mindent intézhet</p></div>
+          <div class="b2bperk"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p><strong>Prioritásos kiszállás</strong> – az irodáját nem kell a sorban bevárni</p></div>
+          <div class="b2bperk"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p><strong>Havi összesített számlázás</strong> – cégek számára megfelelő formában</p></div>
+        </div>
+      </div>
+      <div class="b2bcards">
+        <div class="b2bcard"><div class="b2bchead"><h4>Kis iroda &ndash; 150 nm</h4><span class="b2bdisc">-10%</span></div><div class="b2bpr"><span class="b2borig">18 800 Ft</span><span class="b2bnew">16 920 Ft</span><span class="b2bperiod">/ alkalom</span></div><p>Havi 4 alkalommal: <strong style="color:rgba(255,255,255,.82)">~67 680 Ft/hó</strong></p></div>
+        <div class="b2bcard hl"><div class="b2bchead"><h4>Közepes iroda &ndash; 250 nm</h4><span class="b2bdisc">-10%</span></div><div class="b2bpr"><span class="b2borig">31 300 Ft</span><span class="b2bnew">28 170 Ft</span><span class="b2bperiod">/ alkalom</span></div><p>Havi 4 alkalommal: <strong style="color:rgba(255,255,255,.82)">~112 680 Ft/hó</strong></p></div>
+        <div class="b2bcard"><div class="b2bchead"><h4>Nagy terület &ndash; 400 nm</h4><span class="b2bdisc">-10%</span></div><div class="b2bpr"><span class="b2borig">50 000 Ft</span><span class="b2bnew">45 000 Ft</span><span class="b2bperiod">/ alkalom</span></div><p>Havi 4 alkalommal: <strong style="color:rgba(255,255,255,.82)">~180 000 Ft/hó</strong></p></div>
+        <div class="b2bcard"><div class="b2bchead"><h4>Nagyterület &ndash; 750 nm</h4><span class="b2bdisc">-10%</span></div><div class="b2bpr"><span class="b2borig">93 800 Ft</span><span class="b2bnew">84 420 Ft</span><span class="b2bperiod">/ alkalom</span></div><p>Havi 4 alkalommal: <strong style="color:rgba(255,255,255,.82)">~337 680 Ft/hó</strong></p></div>
+        <div style="margin-top:8px;position:relative;z-index:2"><a href="#order" class="btn btn-g" style="display:block;text-align:center">Vállalati ajánlatot kérek</a></div>
+      </div>
+    </div>
+    <div class="b2bnote"><strong>Fontos:</strong> A vállalati kedvezmény éves vagy legalább 6 hónapos szerződéskötés esetén érvényes. Az árak az irodatakarítási alapdíjra vonatkoznak; anyag- és eszközköltség benne foglalt.</div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order-sec" id="order">
+  <div class="ogrid">
+    <div>
+      <span class="sl">Rendelés</span>
+      <h2 style="color:#fff">Adja le megrendelését egyszerűen</h2>
+      <p class="sd" style="color:rgba(255,255,255,.6)">Töltse ki az űrlapot, és munkatársunk 24 órán belül felveszi Önnel a kapcsolatot.</p>
+      <div class="oics">
+        <div class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><p><strong>24 órás</strong> visszajelzési garancia</p></div>
+        <div class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><p><strong>Adatait</strong> bizalmasan kezeljük</p></div>
+        <div class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="#4caf72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><p><strong>Ellenőrzött</strong> munkatárs érkezik</p></div>
+      </div>
+    </div>
+    <div class="oform reveal">
+      <h3>Megrendelő űrlap</h3>
+      <form onsubmit="submitOrder(event)">
+        <div class="f2">
+          <div class="fg"><label>Keresztnév *</label><input type="text" placeholder="Pl. Kovács" required></div>
+          <div class="fg"><label>Vezetéknév *</label><input type="text" placeholder="Pl. Anna" required></div>
+        </div>
+        <div class="f2">
+          <div class="fg"><label>E-mail *</label><input type="email" placeholder="email@example.hu" required></div>
+          <div class="fg"><label>Telefon *</label><input type="tel" placeholder="+36 XX XXX XXXX" required></div>
+        </div>
+        <div class="f2 full">
+          <div class="fg">
+            <label>Szolgáltatás *</label>
+            <select required>
+              <option value="">– Válasszon –</option>
+              <optgroup label="Lakástakarítás">
+                <option>Alaptakarítás (25 000 Ft)</option>
+                <option>Nagytakarítás (35 000 Ft)</option>
+                <option>Havi takarítás előfizetés (55 000 Ft/hó)</option>
+                <option>Nagyobb lakás – nm-alapú árajánlat</option>
+              </optgroup>
+              <optgroup label="Kertgondozás">
+                <option>Kisebb kert – eseti (20 000 Ft)</option>
+                <option>Közepes/nagy kert – eseti</option>
+                <option>Kert havi előfizetés (89 990 Ft/hó)</option>
+                <option>Szezonális kertcsomag</option>
+              </optgroup>
+              <optgroup label="Kombinált csomagok">
+                <option>Alap kombó: Takarítás + Bevásárlás (85 000 Ft/hó)</option>
+                <option>Otthon kombó: Takarítás + Kert (128 000 Ft/hó)</option>
+                <option>Prémium – Minden benne (175 000 Ft/hó)</option>
+                <option>VIP – Teljes körű ellátás (250 000 Ft+/hó)</option>
+              </optgroup>
+              <optgroup label="Egyéb">
+                <option>Kisjavítás &amp; karbantartás</option>
+                <option>Bevásárlás (önálló)</option>
+                <option>Tisztítóba szállítás</option>
+                <option>Illatosítószer rendelés</option>
+                <option>Vállalati / irodai ajánlat</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="f2">
+          <div class="fg"><label>Ingatlan típusa</label><select><option>Lakás</option><option>Családi ház</option><option>Iroda / üzlet</option><option>Egyéb</option></select></div>
+          <div class="fg"><label>Terület (nm)</label><input type="number" placeholder="Pl. 85"></div>
+        </div>
+        <div class="f2 full"><div class="fg"><label>Cím (Baranya vm.) *</label><input type="text" placeholder="Pl. Pécs, Kossuth tér 3." required></div></div>
+        <div class="f2 full"><div class="fg"><label>Kívánt időpont</label><input type="datetime-local"></div></div>
+        <div class="f2 full"><div class="fg"><label>Megjegyzés</label><textarea placeholder="Pl. allergén anyagokra érzékeny, speciális igény..."></textarea></div></div>
+        <div class="crow"><input type="checkbox" id="szoc"><label for="szoc">Szociális kedvezményt szeretnék igénybe venni (idős, mozgáskorlátozott, súlyos betegség)</label></div>
+        <div class="crow"><input type="checkbox" id="ceg"><label for="ceg">Vállalati / céges megrendelő vagyok (szerződéses kedvezmény érdekében)</label></div>
+        <button type="submit" class="fsub">Megrendelés elküldése</button>
+        <p class="fnote">Adatait bizalmasan kezeljük. 24 órán belül visszahívjuk.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-sec" id="social">
+  <div class="socgrid">
+    <div class="socleft reveal">
+      <span class="sl">Társadalmi felelősség</span>
+      <h2>Azokért is itt vagyunk, akiknek a legjobban szükségük van ránk</h2>
+      <p>A Segítő Kezek Kft. nemcsak szolgáltatást nyújt – hidat épít. Kiemelt figyelmet fordítunk azokra a társadalmi csoportokra, amelyek a legtöbbet nyerhetnek mindennapi segítségünkből.</p>
+      <p>Szociális kedvezményes díjszabásunkkal hozzájárulunk ahhoz, hogy a minőségi háztartási segítség ne csak a jómódúak kiváltsága legyen.</p>
+    </div>
+    <div class="soccards reveal">
+      <div class="soccard"><div class="soci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h4>Időskorú ügyfelek</h4><p>Kedvezményes tarifák idős, egyedülálló ügyfeleknek. Bevásárlás, takarítás, karbantartás – mindennapi kényelemük megőrzéséért.</p></div></div>
+      <div class="soccard"><div class="soci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h4>Mozgáskorlátozottak &amp; Krónikus betegek</h4><p>Daganatos betegségben, Down-szindrómával vagy tartós egészségkárosodással élők számára méltányos szociális díjszabás.</p></div></div>
+      <div class="soccard"><div class="soci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Fenntartható jövő</h4><p>Szelektív hulladékgyűjtés, ökotudatos szerek és útvonal-optimalizáció – mert a természeti környezet iránt is felelősek vagyunk.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact">
+  <div class="cgrid">
+    <div class="reveal">
+      <span class="sl">Kapcsolat</span>
+      <h2>Vegye fel velünk a kapcsolatot</h2>
+      <div class="citem"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Székhely</h4><p>7627 Pécs, Tildy Zoltán utca 29.<br>Baranya vármegye</p></div></div>
+      <div class="citem"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Telefon</h4><p>+36 XX XXX XXXX<br><small style="color:var(--tl)">H–P: 8:00–18:00</small></p></div></div>
+      <div class="citem"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>E-mail</h4><p>info@segitokezek.hu</p></div></div>
+      <div class="citem"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#2d7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4>Szolgáltatási terület</h4><p>Pécs és Baranya Vármegye<br><small style="color:var(--tl)">2027-től agglomeráció, 2028-tól regionális</small></p></div></div>
+    </div>
+    <div class="reveal">
+      <div class="qform">
+        <h3>Gyors üzenet küldése</h3>
+        <form onsubmit="submitContact(event)">
+          <div class="fg" style="margin-bottom:11px"><label>Neve *</label><input type="text" placeholder="Teljes neve" required></div>
+          <div class="fg" style="margin-bottom:11px"><label>E-mail *</label><input type="email" placeholder="email@example.hu" required></div>
+          <div class="fg" style="margin-bottom:11px"><label>Üzenet *</label><textarea placeholder="Miben segíthetünk?" required style="min-height:95px"></textarea></div>
+          <button type="submit" class="fsub">Üzenet küldése</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fgg">
+    <div class="fbrand">
+      <div class="fn">Segítő Kezek Kft.</div>
+      <p>Háztartási, kertészeti és kisjavítási szolgáltatások Pécsett és Baranya vármegyében. Megbízható, ökotudatos, emberközpontú csapat.</p>
+    </div>
+    <div class="fc">
+      <h4>Oldalak</h4>
+      <ul>
+        <li><a href="#about">Rólunk</a></li>
+        <li><a href="#team">Csapat</a></li>
+        <li><a href="#services">Szolgáltatások</a></li>
+        <li><a href="#pricing">Áraink</a></li>
+        <li><a href="#fragrance">Illatosítók</a></li>
+        <li><a href="#booking">Időpontfoglalás</a></li>
+        <li><a href="#b2b">Cégeknek</a></li>
+        <li><a href="#social">Felelősségvállalás</a></li>
+        <li><a href="#contact">Kapcsolat</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Elérhetőség</h4>
+      <ul>
+        <li><a href="#">+36 XX XXX XXXX</a></li>
+        <li><a href="#">info@segitokezek.hu</a></li>
+        <li><a href="#">Pécs, Tildy Z. u. 29.</a></li>
+        <li><a href="#order">Rendelés leadása</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>&copy; 2026 Segítő Kezek Kft. &mdash; Minden jog fenntartva.</span>
+    <span style="color:rgba(255,255,255,.2)">Pécs, Baranya vármegye</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+// ==================== UTILS ====================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3800);
+}
+
+// ==================== REVEAL ====================
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// ==================== PRICING TABS ====================
+function showTab(id, btn) {
+  document.querySelectorAll('.pp').forEach(p => p.classList.remove('act'));
+  document.querySelectorAll('.tb').forEach(b => b.classList.remove('act'));
+  document.getElementById('tab-' + id).classList.add('act');
+  btn.classList.add('act');
+}
+
+// ==================== SERVICE MODAL ====================
+const SVC = {
+  tak: {
+    bg: 'linear-gradient(135deg,#dff0e8,#c2dece)',
+    title: 'Lakástakarítás',
+    desc: 'Alapos, ökotudatos takarítás lakásokban és családi házakban, kizárólag környezetbarát, allergénmentes tisztítószerekkel. Csapatunk diszkréten és megbízhatóan dolgozik.',
+    prices: [
+      { name:'Alaptakarítás', desc:'30–50 nm, porszívózás, felmosás, fürdő & konyha', price:'25 000 Ft', sub:'/ alkalom', feat:false },
+      { name:'Havi előfizetés', desc:'4 alkalom/hó, prioritásos időpont, dedikált munkatárs', price:'55 000 Ft', sub:'/ hó (~40% megtakarítás)', feat:true, badge:'Legnépszerűbb' },
+      { name:'Nagytakarítás', desc:'Szekrények, konyhai gépek, ablakok, keretek mélyebb tisztítása', price:'35 000 Ft', sub:'/ alkalom', feat:false },
+      { name:'Nagyobb lakás', desc:'50–80 nm ~31 000 Ft · 80–120 nm ~42 000 Ft · 120–200 nm ~62 000 Ft', price:'125–417 Ft/nm', sub:'terület szerint', feat:false }
+    ],
+    feats: ['Allergénmentes ökotudatos szerek','Ellenőrzött megbízható munkatárs','Rugalmas időpontfoglalás','Havi számla, 30 napos felmondás','Kisállat-barát módszer','Előzetes igényfelmérés díjmentes']
+  },
+  kert: {
+    bg: 'linear-gradient(135deg,#d0ecda,#a3d0b1)',
+    title: 'Kertgondozás',
+    desc: 'Szezonális kertészeti munkák szakszerű elvégzése: gyepnyírás, gyomirtás, cserjenyírás, ültetés, talajelőkészítés. Baranya vármegye egész területén.',
+    prices: [
+      { name:'Kisebb kert (eseti)', desc:'~200 m² alatt, fűnyírás, gyomirtás, seprés, elszállítás', price:'20 000 Ft', sub:'/ alkalom', feat:false },
+      { name:'Közepes / nagy kert', desc:'200 m² felett, komplex kertészeti munka, fa- és bokormunka', price:'35 000–65 000 Ft', sub:'/ alkalom', feat:false },
+      { name:'Havi kertcsomag', desc:'4 alkalom/hó, szezonális munkák, dedikált kertész', price:'89 990 Ft', sub:'/ hó', feat:true, badge:'Ajánlott' },
+      { name:'Szezonális csomag', desc:'Tavaszi/őszi nagytakarítás, ültetés, mulcsozás, metszés', price:'15 000–35 000 Ft', sub:'projekt szerint', feat:false }
+    ],
+    feats: ['Profi eszközök saját géppark','Baranya vm. egész területén','Hulladék elszállítása benne','Ökotudatos gyomirtás','Ültetési tanácsadás díjmentes','Szezonális emlékeztetők']
+  },
+  javitas: {
+    bg: 'linear-gradient(135deg,#e4eceb,#c2d8cc)',
+    title: 'Kisjavítás & Karbantartás',
+    desc: 'Kisebb otthoni javítások és karbantartási feladatok: csöpögő csap, ajtó, bútor összszerelés, festés előkészítése és sok más. Gyors, megbízható megoldások.',
+    prices: [
+      { name:'Kisebb javítás', desc:'Csöpögő csap, kilincs, zárak, szúnyogháló csere', price:'8 000–15 000 Ft', sub:'/ munka', feat:false },
+      { name:'Közepes feladat', desc:'Bútor összeszerelés, ajtójavítás, csempézés', price:'15 000–35 000 Ft', sub:'/ munka', feat:false },
+      { name:'Óradíj alapú', desc:'Bonyolultabb, hosszabb feladatokra rugalmasan', price:'5 500 Ft', sub:'/ óra', feat:true, badge:'Rugalmas' },
+      { name:'Egyedi árajánlat', desc:'Komplex felújítási vagy karbantartási projekt', price:'Egyedi', sub:'előzetes felmérés után', feat:false }
+    ],
+    feats: ['Saját szerszámok és anyagok','Gyors kiszállás Pécsen','Átlátható óradíj','Garancia az elvégzett munkára','Ingyenes előzetes felmérés','Sürgősségi megkeresés lehetséges']
+  },
+  bevasarlas: {
+    bg: 'linear-gradient(135deg,#d8eee0,#b2d4c0)',
+    title: 'Bevásárlás',
+    desc: 'Megbízáson alapuló bevásárlás: listája alapján megvásároljuk és házhozszállítjuk az élelmiszereket és egyéb cikkeket. Ideális idősek, elfoglalt szülők és mozgáskorlátozottak számára.',
+    prices: [
+      { name:'Egyszeri bevásárlás', desc:'Lista alapján, 1 körút, helyi üzletekbe', price:'3 500 Ft', sub:'+ áruérték', feat:false },
+      { name:'Heti 1x', desc:'Rendszeres heti bevásárlás fix napon', price:'12 000 Ft', sub:'/ hó (4 alkalom)', feat:true, badge:'Kedvelt' },
+      { name:'Heti 2x', desc:'Kétszeri bevásárlás hetente', price:'22 000 Ft', sub:'/ hó (8 alkalom)', feat:false },
+      { name:'Speciális', desc:'Piaci bevásárlás, gyógyszertár, ügyintézés', price:'4 500–7 000 Ft', sub:'/ alkalom', feat:false }
+    ],
+    feats: ['Számla átadása minden alkalommal','Aprópénz-elszámolás','Hűtési lánc megőrzése','Gyógyszertár is vállalható','Szociális kedvezmény igénybevehető','Havi egységes számlázás']
+  },
+  tisztito: {
+    bg: 'linear-gradient(135deg,#e0ede6,#bbdac8)',
+    title: 'Tisztítóba szállítás',
+    desc: 'Ruházati cikkek, ágynemű, függönyök átvétele Öntől, tisztítóba szállítása, majd visszahozatala. Önnek semmi dolga.',
+    prices: [
+      { name:'Alap szállítás', desc:'Átvétel + visszaszállítás, max. 2 zsák', price:'2 500 Ft', sub:'/ alkalom + tisztítói díj', feat:false },
+      { name:'Nagy tétel', desc:'3–6 zsák, kabát, ágynemű, függöny', price:'4 000 Ft', sub:'/ alkalom + tisztítói díj', feat:true, badge:'Leggyakoribb' },
+      { name:'Havi előfizetés', desc:'2 alkalom/hó, fix időpontban', price:'7 500 Ft', sub:'/ hó + tisztítói díj', feat:false },
+      { name:'Expressz', desc:'Aznapi vagy másnapi visszahozatal', price:'+1 500 Ft', sub:'felár az alap díjhoz', feat:false }
+    ],
+    feats: ['Partneri tisztítóval dolgozunk','Sérülésmentes csomagolás','Átvételi elismervény','Expressz lehetőség','Havi egységes számlázás','Rugalmas időpontok']
+  },
+  premium: {
+    bg: 'linear-gradient(135deg,#1a4d2e,#2d7a47)',
+    title: 'Prémium Kombinált Csomag',
+    desc: 'Teljes körű otthongondozás egy csomagban: takarítás, bevásárlás, kertgondozás és karbantartás egyetlen dedikált munkatárssal. A legtöbb megtakarítás és a legnagyobb kényelem.',
+    prices: [
+      { name:'Alap kombó', desc:'Takarítás (4×) + Bevásárlás (4×) havonta', price:'85 000 Ft', sub:'/ hó – 5% kedvezmény', feat:false },
+      { name:'Otthon kombó', desc:'Takarítás (4×) + Kertgondozás (4×) havonta', price:'128 000 Ft', sub:'/ hó – 10% kedvezmény', feat:false },
+      { name:'Prémium – Minden', desc:'Takarítás + Kert + Bevásárlás + Kisjavítás', price:'175 000 Ft', sub:'/ hó – 15% kedvezmény', feat:true, badge:'Legjobb értékű' },
+      { name:'VIP csomag', desc:'Teljes körű, dedikált csapat, prioritásos kiszállás', price:'250 000 Ft+', sub:'/ hó – 20% kedvezmény', feat:false }
+    ],
+    feats: ['Dedikált állandó munkatárs','5–20% csomag-kedvezmény','Prioritásos időpont és kiszállás','Egyetlen havi számla','6 hónapos szerződés (lemondható)','Ingyenes előzetes felmérés']
+  }
+};
+
+function openModal(id) {
+  const d = SVC[id];
+  if (!d) return;
+  document.getElementById('mHimg').style.background = d.bg;
+  document.getElementById('mTitle').textContent = d.title;
+  document.getElementById('mDesc').textContent = d.desc;
+  document.getElementById('mPrices').innerHTML = d.prices.map(p => `
+    <div class="m-prow${p.feat ? ' feat' : ''}">
+      <div><div class="mpn">${p.name}</div><div class="mpd">${p.desc}</div></div>
+      <div style="flex-shrink:0;text-align:right;margin-left:12px">
+        <div class="mpp">${p.price}</div>
+        <div class="mps">${p.sub}</div>
+        ${p.badge ? `<span class="mpb">${p.badge}</span>` : ''}
+      </div>
+    </div>`).join('');
+  document.getElementById('mFeats').innerHTML = d.feats.map(f => `<div class="m-feat">${f}</div>`).join('');
+  document.getElementById('svcModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('svcModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ==================== FRAGRANCE ====================
+let fragPkg = { qty: 10, disc: 4 };
+const fragLabels = { 5:'Próbacsomag', 8:'Starter csomag', 10:'Otthon csomag', 12:'Kedvelt csomag', 15:'Nagy csomag', 20:'Prémium csomag' };
+
+function pickPkg(el, qty, disc) {
+  document.querySelectorAll('.frag-card').forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  fragPkg = { qty, disc };
+  const unitDisc = Math.round(1000 * (1 - disc / 100));
+  const total = unitDisc * qty;
+  const save = 1000 * qty - total;
+  document.getElementById('fbarTitle').textContent = qty + ' db – ' + (fragLabels[qty] || 'csomag');
+  document.getElementById('fbarDetail').textContent = 'Egységár: ' + unitDisc.toLocaleString('hu-HU') + ' Ft/db · Megtakarítás: ' + save.toLocaleString('hu-HU') + ' Ft';
+  document.getElementById('fbarTotal').textContent = total.toLocaleString('hu-HU') + ' Ft';
+  document.getElementById('fbarSave').textContent = '–' + disc + '% csomag kedvezmény';
+}
+
+function orderFrag() {
+  const scents = [...document.querySelectorAll('.scent.on')].map(s => s.textContent.replace(/^\S+\s*/, '').trim()).join(', ');
+  const { qty, disc } = fragPkg;
+  const total = Math.round(1000 * (1 - disc / 100) * qty);
+  showToast('🌿 Megrendelés elküldve: ' + qty + ' db illatosítószer – ' + total.toLocaleString('hu-HU') + ' Ft' + (scents ? ' (' + scents + ')' : ''));
+}
+
+// ==================== BOOKING CALENDAR ====================
+// Demo foglalt napok: 'full' = egész nap foglalt, array = részben foglalt napszakok
+const BOOKED = {};
+(function () {
+  const now = new Date();
+  const y = now.getFullYear(), m = now.getMonth();
+  const pad = n => String(n).padStart(2, '0');
+  const key = (d) => y + '-' + pad(m + 1) + '-' + pad(d);
+  // Teljes napok
+  [now.getDate() + 2, now.getDate() + 5, now.getDate() + 9, now.getDate() + 14].forEach(d => {
+    if (d >= 1 && d <= 31) BOOKED[key(d)] = 'full';
+  });
+  // Részleges
+  [now.getDate() + 3, now.getDate() + 7].forEach(d => {
+    if (d >= 1 && d <= 31) BOOKED[key(d)] = ['08:00–12:00', '12:00–16:00'];
+  });
+})();
+
+const SLOTS = ['08:00–12:00', '12:00–16:00', '16:00–20:00'];
+const MONTHS = ['Január','Február','Március','Április','Május','Június','Július','Augusztus','Szeptember','Október','November','December'];
+let CAL = { year: new Date().getFullYear(), month: new Date().getMonth(), day: null, slot: null };
+
+function renderCal() {
+  const { year, month } = CAL;
+  document.getElementById('calTitle').textContent = year + '. ' + MONTHS[month];
+  const first = new Date(year, month, 1).getDay();
+  const total = new Date(year, month + 1, 0).getDate();
+  const offset = (first + 6) % 7;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const pad = n => String(n).padStart(2, '0');
+  let html = '';
+  for (let i = 0; i < offset; i++) html += '<div class="cd cd-empty"></div>';
+  for (let d = 1; d <= total; d++) {
+    const dt = new Date(year, month, d);
+    const key = year + '-' + pad(month + 1) + '-' + pad(d);
+    const booked = BOOKED[key];
+    const isPast = dt < today;
+    const isFull = booked === 'full';
+    const isToday = dt.getTime() === today.getTime();
+    const isSel = CAL.day === key;
+    let cls = 'cd';
+    if (isPast || isFull) cls += ' cd-busy';
+    else if (isSel) cls += ' cd-sel';
+    else if (isToday) cls += ' cd-today';
+    const click = (!isPast && !isFull) ? ' onclick="selectDay(\'' + key + '\')"' : '';
+    html += '<div class="' + cls + '"' + click + '>' + d + '</div>';
+  }
+  document.getElementById('calDays').innerHTML = html;
+  renderSlots();
+}
+
+function selectDay(key) {
+  CAL.day = key;
+  CAL.slot = null;
+  renderCal();
+  updateBSum();
+}
+
+function renderSlots() {
+  const ts = document.getElementById('timeslots');
+  const sr = document.getElementById('slotRow');
+  if (!CAL.day) { ts.style.display = 'none'; return; }
+  ts.style.display = 'block';
+  const booked = BOOKED[CAL.day] || [];
+  sr.innerHTML = SLOTS.map(s => {
+    const full = Array.isArray(booked) && booked.includes(s);
+    const sel = CAL.slot === s;
+    let cls = 'slot' + (full ? ' slot-full' : sel ? ' slot-sel' : '');
+    const click = !full ? ' onclick="selectSlot(\'' + s + '\')"' : '';
+    return '<div class="' + cls + '"' + click + '>' + (full ? s + ' – Foglalt' : s) + '</div>';
+  }).join('');
+}
+
+function selectSlot(s) {
+  CAL.slot = s;
+  renderSlots();
+  updateBSum();
+}
+
+function changeMonth(dir) {
+  CAL.month += dir;
+  if (CAL.month > 11) { CAL.month = 0; CAL.year++; }
+  if (CAL.month < 0) { CAL.month = 11; CAL.year--; }
+  CAL.day = null; CAL.slot = null;
+  renderCal();
+  updateBSum();
+}
+
+function updateBSum() {
+  const el = document.getElementById('bSummary');
+  if (!CAL.day) { el.innerHTML = '<span class="nosel">Kérjük, válasszon napot a naptárból.</span>'; return; }
+  const [y, m, d] = CAL.day.split('-');
+  let html = '<strong>Kiválasztott nap:</strong> ' + y + '. ' + MONTHS[parseInt(m) - 1] + ' ' + parseInt(d) + '.<br>';
+  html += CAL.slot
+    ? '<strong>Napszak:</strong> ' + CAL.slot
+    : '<em style="color:var(--tl);font-size:.8rem">Kérjük, válasszon napszakot is fent.</em>';
+  el.innerHTML = html;
+}
+
+function submitBooking(e) {
+  e.preventDefault();
+  if (!CAL.day || !CAL.slot) { showToast('⚠️ Kérjük, válasszon napot és napszakot!'); return; }
+  showToast('✅ Foglalás elküldve! 24 órán belül visszaigazoljuk.');
+  e.target.reset();
+  CAL.day = null; CAL.slot = null;
+  renderCal(); updateBSum();
+}
+
+// ==================== FORMS ====================
+function submitOrder(e) { e.preventDefault(); showToast('✅ Megrendelése megérkezett! 24 órán belül visszahívjuk.'); e.target.reset(); }
+function submitContact(e) { e.preventDefault(); showToast('✅ Üzenete elküldve! Hamarosan válaszolunk.'); e.target.reset(); }
+
+// ==================== INIT ====================
+renderCal();
+</script>
+</body>
+</html>
